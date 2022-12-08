@@ -765,7 +765,7 @@ line-height: 1.88;
     opacity: 0;
     pointer-events: none;
 }
-.page-modal{
+.backdrop-modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -778,8 +778,7 @@ line-height: 1.88;
       0px 2px 1px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
 }
-.page-modal__forma{
-    /* outline: 1px solid green; */
+.forma{
     padding: 40px;
 }
 .button-closed{
@@ -796,7 +795,7 @@ line-height: 1.88;
     background-color: var(--primary-bg-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.button-closed{
+.button-closed-icon{
     width: 18px;
     height: 18px;
     fill: var(--primary-logo-color);
@@ -804,12 +803,12 @@ line-height: 1.88;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function);
 }  
-.button-closed:hover,
-.button-closed:focus{
+.button-closed-icon:hover,
+.button-closed-icon:focus{
 fill: var(--accent-color);
 }
 
-.page-modal__title{
+.forma-title{
 display: block;
 text-align: center;
 margin-top: 0;
@@ -820,29 +819,26 @@ font-size: 20px;
 line-height: 1.15;
 letter-spacing: 0.03em;
 color: var(--title-text-color);
-/* outline: 1px solid red; */
 }
-.page-modal__container{
+.forma-container{
 display: flex;
 flex-direction: column;
-outline: 1px solid blue;
 }
-.page-modal__field{
+.forma-item{
     display: flex;
     flex-direction: column;
     position: relative;
     width: 448px;
     margin-bottom: 10px;
-    /* outline: 1px solid green; */
 }
-.form-label{
+.forma-item__title{
 margin-bottom: 4px;
 font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.01em;
 color:var(--primary-text-color);
 }
-.page-modal__input{
+.forma-item__input{
     width: 448px;
     height: 40px;
     margin: 0;
@@ -853,11 +849,11 @@ color:var(--primary-text-color);
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function);
 }
-.page-modal__input:focus-within{
+.forma-item__input:focus-within{
     border: 1px solid var(--accent-color);
     outline: none;
 }
-.page-modal__icon{
+.forma-item__icon{
     position: absolute;
     bottom: 11px;
     left: 12px;
@@ -865,19 +861,16 @@ color:var(--primary-text-color);
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function);
 }
-.page-modal__input:focus-within ~ .page-modal__icon{
+.forma-item__input:focus-within ~ .page-modal__icon{
     fill: var(--accent-color);
 }
-.page-modal__field--big{
+.forma-item__comment{
     width: 448px;
     height: 138px;
     margin-bottom: 20px;
-    /* outline: 1px solid green; */
 }
-.page-modal__label{
-    margin-bottom: 4px;
-}
-.page-modal__textarea{
+
+.forma-item__input--text{
     width: 448px;
     height: 120px;
     margin: 0;
@@ -889,23 +882,25 @@ color:var(--primary-text-color);
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function);
 }
-.page-modal__textarea:focus-within{
+.forma-item__input--text:focus-within{
     border: 1px solid var(--accent-color);
     outline: none;
 }
-.page-modal__textarea::placeholder{
+.forma-item__input--text::placeholder{
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
     }
-.form-field-checkbox{
+.forma-item__box{
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin-bottom: 30px;
 }
-.checkbox-input{
+.forma-item__input--box{
     /* -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; */
@@ -919,11 +914,16 @@ color:var(--primary-text-color);
     overflow: hidden;
 }
 
-.checkbox-label{
-    display: flex;
-    align-items: center;
+.forma-item__title--box{
+display: flex;
+align-items: center;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 1.71px;
+letter-spacing: 0.03em;
     }
-.checkbox-icon{
+.forma-item__icon--box{
+    position: static;
     display: inline-block;
     margin-right: 7px;
     width: 16px;
@@ -931,13 +931,13 @@ color:var(--primary-text-color);
     border: 2px solid var(--title-text-color);
     border-radius: 2px;
 }
-.checkbox-input:checked + .checkbox-icon{
+.forma-item__input--box:checked + .forma-item__icon--box{
     background-color: var(--accent-color);
     border-color: var(--accent-color);
     background-size: contain;
     background-origin: border-box;
 }
-.checkbox-link{
+.forma-item__link{
     display: inline-block;
     color: var(--accent-color);
     padding: 0;

@@ -327,49 +327,49 @@
     </div>
     </footer>
     <div class="backdrop is-hidden " data-modal>
-        <div class="page-modal">
-            <form class="page-modal__forma" name="forma">
-            <button data-modal-close class="button button-closed">
-                <svg class="" width="18px" height="18px">
+        <div class="backdrop-modal">
+            <form class="forma" name="forma">
+            <button data-modal-close class="button-closed">
+                <svg class="button-closed-icon" width="18px" height="18px">
                 <use href="./images/symbol-defs.svg#icon-close-black-18dp">
                 </use>
                 </svg></button>
                 <!-- FORMA-MODAL -->
-                <p class="page-modal__title">Залиште свої дані, ми вам передзвонимо</p>
-                <div class="page-modal__container">
-                    <div class="page-modal__field">
-                        <label for="name" class="page-modal__label">Ім'я</label>
-                        <input type="text" class="page-modal__input" name="name" id="name">
-                        <svg class="page-modal__icon" width="18px" height="18px">
+                <p class="forma-title">Залиште свої дані, ми вам передзвонимо</p>
+                <div class="forma-container">
+                    <div class="forma-item">
+                        <label for="name" class="forma-item__title">Ім'я</label>
+                        <input type="text" class="forma-item__input" name="name" id="name">
+                        <svg class="forma-item__icon" width="18px" height="18px">
                             <use href="./images/symbol-defs.svg#icon-person-black-18dp-1">
                             </use></svg>
                     </div>
-                    <div class="page-modal__field">
-                        <label for="phone" class="page-modal__label">Телефон</label>
-                        <input type="text" class="page-modal__input" name="phone" id="phone">
-                        <svg class="page-modal__icon" width="18px" height="18px">
+                    <div class="forma-item">
+                        <label for="phone" class="forma-item__title">Телефон</label>
+                        <input type="text" class="forma-item__input" name="phone" id="phone">
+                        <svg class="forma-item__icon" width="18px" height="18px">
                             <use href="./images/symbol-defs.svg#icon-phone-black-18dp-1">
                             </use></svg>
                     </div>
-                    <div class="page-modal__field">
-                        <label for="post" class="page-modal__label">Пошта</label>
-                        <input type="text" class="page-modal__input" name="post" id="post">
-                        <svg class="page-modal__icon" width="18px" height="18px">
+                    <div class="forma-item">
+                        <label for="post" class="forma-item__title">Пошта</label>
+                        <input type="text" class="forma-item__input" name="post" id="post">
+                        <svg class="forma-item__icon" width="18px" height="18px">
                             <use href="./images/symbol-defs.svg#icon-email-black-18dp-1">
                             </use></svg>
                     </div>
-                    <div class="page-modal__field page-modal__field--big">
-                        <label for="comment" class="page-modal__label">Коментар</label>
-                       <textarea class="page-modal__textarea" name="comment" id="comment" placeholder="Введіть текст"></textarea>
+                    <div class="forma-item forma-item__comment">
+                        <label for="comment" class="forma-item__title">Коментар</label>
+                       <textarea class="forma-item__input forma-item__input--text" name="comment" id="comment" placeholder="Введіть текст"></textarea>
                     </div>
-                    <div class="form-field-checkbox">
-                    <label class="checkbox-label" >
-                    <input class="checkbox-input" type="checkbox"  name="polycy" value="polycy">
-                    <svg class="checkbox-icon" width="16px" height="15px">
+                    <div class="forma-item forma-item__box">
+                    <label class="forma-item__title forma-item__title--box" >
+                    <input class="forma-item__input forma-item__input--box" type="checkbox"  name="polycy" value="polycy">
+                    <svg class="forma-item__icon forma-item__icon--box" width="16px" height="15px">
                         <use href="./images/symbol-defs.svg#icon-icon-check-1">
                         </use></svg>
                         Погоджуюся з розсилкою та приймаю 
-                        <a class="checkbox-link" href="">Умови договору</a>
+                        <a class="forma-item__link" href="">Умови договору</a>
                     </label>
                     </div>
                     <button class="submit-btn-modal" type="submit">
