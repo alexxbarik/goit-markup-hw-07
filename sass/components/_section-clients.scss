@@ -1,0 +1,43 @@
+.section-clients__title{
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:$title-text-color;    
+    }
+    .client-list__list{
+    display: flex;
+    @extend %list;
+    }
+    
+    .client-list__item{
+        margin-right: 30px;
+        &:nth-last-child(1){
+            margin-right: 0;
+        }    
+    }
+   
+    
+    .client-list__icon{
+    @include centeredflex();
+    width: 170px;
+    height: 92px;
+    padding: 0;
+    border: 1px solid $clients-logo-color;
+    border-radius: 4px;
+    background-color: transparent;
+    fill: $clients-logo-color;
+    cursor: pointer;
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+    &:hover,
+    &:focus{
+    fill: $prymary-accent-color;
+    border: 1px solid $prymary-accent-color;
+    }
+    }
+    
