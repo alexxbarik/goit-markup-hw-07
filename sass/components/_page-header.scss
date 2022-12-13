@@ -24,7 +24,7 @@
     display: block;
     padding-top: 32px; 
     padding-bottom: 32px;   
-    font-family: 'Roboto';
+    font-family: $font-family;
     text-decoration: none;
     color: $title-text-color;
     font-weight: 500;
@@ -45,14 +45,6 @@
         }
     }
     
-    // .site-nav__link:hover, 
-    // .site-nav__link:focus {
-    // color:var(--accent-color);
-    // // }
-    // .site-nav__link--current {
-    // position: relative;
-    // color: var(--accent-color);
-    // }
     .site-nav__link--current::after{
     display: block;
     position: absolute;
@@ -100,8 +92,4 @@
     fill: $prymary-accent-color;
     }
     }
-    // .auth-nav__link:hover,
-    // .auth-nav__link:focus {
-    // color: var(--accent-color);
-    // fill: var(--accent-color);
-    // }
+    

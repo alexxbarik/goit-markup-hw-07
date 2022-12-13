@@ -1,4 +1,5 @@
-.address-nav__list, .client-list__list, .socials-list__list, .team-list__list, .section-team__list, .work-list__list, .feature-list__list, .auth-nav__list, .site-nav__list {
+@charset "UTF-8";
+.card-set__list, .portfolio-filters__list, .address-nav__list, .client-list__list, .socials-list__list, .team-list__list, .section-team__list, .work-list__list, .feature-list__list, .auth-nav__list, .site-nav__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -98,7 +99,7 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-family: "Roboto";
+  font-family: "Roboto", "Sans-serif";
   text-decoration: none;
   color: #212121;
   font-weight: 500;
@@ -804,7 +805,7 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: "Roboto";
+  font-family: "Roboto", "Sans-serif";
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1028,4 +1029,140 @@ body {
 }
 .forma-modal__button:hover, .forma-modal__button:focus {
   background-color: #188CE8;
+}
+
+/* ПОРТФОЛІО */
+.portfolio-filters__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-filters__item + .portfolio-filters__item {
+  margin-left: 8px;
+}
+
+/* кнопки */
+.portfolio-filters__button {
+  padding: 6px 22px;
+  min-width: 100%;
+  color: #212121;
+  background-color: #F5F4FA;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.portfolio-filters__button:hover, .portfolio-filters__button:focus {
+  background-color: #2196F3;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* наші роботи */
+.card-set__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-set__link {
+  display: block;
+  text-decoration: none;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.card-set__link:hover, .card-set__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.product-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-thumb__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #FFFFFF;
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+
+.card-set__link:hover .product-thumb__overlay,
+.card-set__link:focus .product-thumb__overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card-set__item {
+  max-width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.card-set__item:nth-child(3n) {
+  margin-right: 0;
+}
+.card-set__item:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
+.product-thumb__item {
+  display: block;
+}
+
+.product-thumb__meta {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 370px;
+  border-bottom: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+}
+
+.product-thumb__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: #212121;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.product-thumb__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.88;
 }/*# sourceMappingURL=main.css.map */
